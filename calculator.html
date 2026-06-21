@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator</title>
+
+    <link rel="stylesheet" href="calculator.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-calculator"></i>
+            <h1>GST Calculator</h1>
+        </div>
+
+        <div class="header-text">
+            Fast • Accurate • Free
+        </div>
+
+         <button id="darkModeBtn" class="dark-btn">
+         🌙 Dark Mode
+         </button>
+    </header>
+
+
+    <!-- Main Section -->
+    <main class="container">
+
+        <!-- Left Card -->
+        <section class="card input-card">
+
+            <h2>Calculate Your GST</h2>
+            <p>Enter the details below to calculate GST amount</p>
+
+            <div class="form-group">
+                <label>Enter Amount (₹)</label>
+
+                <div class="input-box">
+                    <input type="number"
+                        id="amount"
+                        placeholder="Enter Amount">
+
+                    <span>₹</span>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label>Select GST Rate (%)</label>
+
+                <select id="gstRate">
+                    <option value="5">5%</option>
+                    <option value="12">12%</option>
+                    <option value="18" selected>18%</option>
+                    <option value="28">28%</option>
+                </select>
+            </div>
+
+
+            <!-- Quick GST Buttons -->
+            <div class="gst-buttons">
+
+                <button class="gst-btn" data-rate="5">
+                    5%
+                </button>
+
+                <button class="gst-btn" data-rate="12">
+                    12%
+                </button>
+
+                <button class="gst-btn active" data-rate="18">
+                    18%
+                </button>
+
+                <button class="gst-btn" data-rate="28">
+                    28%
+                </button>
+
+            </div>
+
+
+            <button id="calculateBtn" class="calculate-btn">
+                <i class="fa-solid fa-calculator"></i>
+                Calculate GST
+            </button>
+
+            <button id="resetBtn" class="reset-btn">
+                <i class="fa-solid fa-rotate"></i>
+                Reset
+            </button>
+
+        </section>
+
+
+
+        <!-- Right Card -->
+        <section class="card result-card">
+
+            <h2>Calculation Result</h2>
+            <p>Here is the breakdown of your GST calculation</p>
+
+
+            <div class="result-box">
+
+                <div class="result-item">
+                    <span>Original Amount</span>
+                    <strong id="originalAmount">
+                        ₹0.00
+                    </strong>
+                </div>
+
+                <div class="result-item">
+                    <span>GST Amount</span>
+                    <strong id="gstAmount">
+                        ₹0.00
+                    </strong>
+                </div>
+
+                <div class="result-item total">
+                    <span>Total Amount</span>
+                    <strong id="totalAmount">
+                        ₹0.00
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="success-message">
+                ✓ Fast GST Calculation
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-box">
+
+            <div class="developer">
+                <h3>About Developer</h3>
+
+                <p>
+                    This tool is built to make GST calculations
+                    simple and hassle-free.
+                </p>
+            </div>
+
+
+            <div class="contact">
+                <h3>Contact</h3>
+
+                <p><strong>Name:</strong> Ritik Pal</p>
+
+                <p>
+                    <strong>Email:</strong>
+                     ritikdh34@gmail.com
+                </p>
+            </div>
+
+
+            <div class="digital-heroes">
+
+                <a href="https://digitalheroesco.com"
+                    target="_blank"
+                    class="hero-btn">
+
+                    Built for Digital Heroes
+                </a>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 GST Calculator. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="calculator.js"></script>
+
+</body>
+</html>
